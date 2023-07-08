@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html, body{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+html::-webkit-scrollbar{
+    width:1rem;
+}
+html::-webkit-scrollbar-thumb{
+    background: #F08080;
+}
+section{
+    padding:3rem 9%;
+}
+
+
+header {
+    position: fixed;
+    top:0px;
+    left:0px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    width:100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    justify-content: left;
+    z-index: 1;
+}
+
+.logoDesign{
+    height: 100px;
+    width: 100px;
+}
+
+.background {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    object-position: 40% 60%; 
+}
+
+.title{
+    position:absolute;
+    left:0;
+    right:0;
+    margin: auto;
+    text-align: center; 
+    top:40%;
+    color:rgba(12, 12, 12,0.9);
+    font-size: 70px; 
+    font-family: broadway;
+}
+
+.container {
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    width : 100%;
+    flex-direction: column;
+}
+
+.letter {
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.2);
+    height: 60rem;
+    width: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(to top, #e8a2a2, #4f41ed);
+    color: white;
+    margin: 5vh 0;
+    border-radius: 7px;
+}
+
+span{
+    display: inline-flex;
+    color: #fff;
+    font-size: 4rem;
+    text-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    animation: fadeIn .2s linear backwards;
+    letter-spacing: .1rem;
+}
+
+.mainText{
+    font-size: 2rem;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.clickMe {
+    border: 0;
+    line-height: 3.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 20px;
+    background: rgba(220, 0, 0, 1);
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+    font-size: 1.5rem;
+}
+
+.clickMe:hover {
+    background-color: rgba(255, 0, 0, 1);
+}
+
+.clickMe:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+.modal-content {
+    position:absolute;
+    left:0;
+    right:0;
+    margin: auto;
+    margin-top: -3%;
+    width: 40rem;
+    height:65rem;
+  }
+  
+  /* The Close Button */
+.close {
+    color: #aaaaaa;
+    right:10px;
+    top:10px;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 30px;
+    padding-left: 10px;
+    padding-right:10px;
+  }
+  
+.close:hover,
+.close:focus {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+.view {
+    width: 100%;
+    height: 100%;
+  }
+
+.goodMemories {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+.sorry {
+    height: 40rem;
+    width: 40rem;
+  }
+
+.forgive {
+    text-align: center; 
+    margin-top: 3%;
+    color:rgba(12, 12, 12,0.9);
+    font-size: 70px; 
+    font-family: broadway;
+}
+
+.yes, .no {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2rem;
+}
+
+.yes {
+    background-color: green;
+}
+
+.yes:hover {
+    background-color: #0fac15;
+}
+
+
+.image {
+    height:80%;
+    width:100%;
+    object-fit: cover;
+ }
+
+ .text {
+    font-size: 3rem; 
+    font-weight: bold;
+    color:rgba(255, 255, 255, 0.8); 
+    border-radius: 20px; 
+    border-color: rgba(255,255,255,0.4);
+    padding: 2rem 2rem 2rem 2rem;
+    text-align: center; 
+    margin-top: 10%;
+    box-shadow:
+    inset 0 0 50px rgba(255,255,255,0.5),      /* inner white */
+    inset 20px 0 80px rgba(255, 1, 255,0.5),   /* inner left magenta short */
+    inset -20px 0 80px rgba(0, 255, 255,0.5),  /* inner right cyan short */
+    inset 20px 0 300px rgba(255, 0, 255,0.5),  /* inner left magenta broad */
+    inset -20px 0 300px rgba(0, 255, 255,0.5), /* inner right cyan broad */
+    0 0 50px #fff,            /* outer white */
+    -10px 0 80px #f0f,        /* outer left magenta */
+    10px 0 80px #0ff;         /* outer right cyan */
+ }
+
+ .surprise {
+    font-size: 3rem; 
+    color:rgba(255, 255, 255, 0.8); 
+    border-color: rgba(255,255,255,0.4);
+    padding: 2rem 2rem 2rem 2rem;
+    text-align: center; 
+    margin-top: 15%;
+    box-shadow:
+    inset 0 0 50px rgba(255,255,255,0.5),      /* inner white */
+    inset 20px 0 80px rgba(255, 1, 255,0.5),   /* inner left magenta short */
+    inset -20px 0 80px rgba(0, 255, 255,0.5),  /* inner right cyan short */
+    inset 20px 0 300px rgba(255, 0, 255,0.5),  /* inner left magenta broad */
+    inset -20px 0 300px rgba(0, 255, 255,0.5), /* inner right cyan broad */
+    0 0 50px #fff,            /* outer white */
+    -10px 0 80px #f0f,        /* outer left magenta */
+    10px 0 80px #0ff;          /* outer right cyan */
+
+    left:0;
+    right:0;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-weight: bold;
+    position: absolute;
+ }
+
+
+@media(max-width: 600px){
+    header{
+        justify-content: center;
+    }
+
+    .logoDesign{
+        height:70px;
+        width: 70px;
+    }
+
+    .background{
+        height:100vh;
+    }
+
+    .title{
+        font-size:  4rem;
+        font-weight: bold;
+        font-family: 'Times New Roman';;
+        border-style: solid;
+        width: 70%;
+        padding-left : 5%;
+        padding-right : 5%;
+        padding-top: 10%;
+        padding-bottom:  10%;
+        border-radius: 20px;
+        color: rgba(0, 0, 0, 0.9);
+        border-color: rgb(205, 196, 196);
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
+    }
+
+    html{
+        font-size:50%;
+    }
+
+    .letter {
+        box-shadow: 10px 10px 10px rgba(0,0,0,0.2);
+        height: 70rem;
+        width: 40rem;
+    }
+
+    .modal-content {
+        width: 40rem;
+        height:63rem;
+    }
+
+    .close {
+        font-size :20px;
+        padding-left: 7px;
+        padding-right:7px;
+    }
+    
+    .sorry {
+        height: 30rem;
+        width: 30rem;
+    }
+
+    .forgive {
+        text-align: center; 
+        margin-top: 3%;
+        color:rgba(12, 12, 12,0.9);
+        font-size: 70px; 
+        font-family: 'Times New Roman';
+    }
+
+    .text {
+        font-size: 2.2rem;
+        font-family: 'elephant';
+    }
+}
+
+.footer {
+    background-color: pink;
+    border-style: solid;
+    border-left: 0px;
+    border-right: 0px;
+}
+.footer .box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:2rem;  
+}
+.footer .box h3{
+    font-size: 2.2rem;
+    color: #222;
+    padding:1rem 0;
+}
+.footer .box .link{
+    padding:1rem 0;
+    font-size: 1.4rem;
+    color: #666;
+    display:block;
+}
+.footer .box .link i{
+    padding-right: .5rem;
+    color: #F08080;
+}
+.footer .box .link:hover{
+    color: #F08080;
+}
+.footer .box .link:hover i{
+    padding-right: 2rem;
+}
+.footer .box .share{
+    margin-top: 2rem;
+}
+.footer .box-container .box a{
+    height:4.5rem;
+    width:4.5rem;
+    line-height: 4.5rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    background: #eee;
+    text-align: center;
+    color: #222;
+    margin-right: .5rem;
+}
+.footer .box-container .box a:hover{
+    color: #fff;
+    background: #F08080;
+}
+.footer .box-container .box p{
+    padding: 1rem 0;
+    font-size: 1.7rem;
+    color: #666;
+}
+
+.icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5%;
+   }
+
+.icon {
+    margin-left : 1%;
+    margin-right: 1%;
+}
