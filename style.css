@@ -80,8 +80,9 @@ header {
 
 .letter {
     box-shadow: 10px 10px 10px rgba(0,0,0,0.2);
-    height: 60rem;
+    height: 62rem;
     width: 50rem;
+    padding-bottom: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
