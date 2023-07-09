@@ -340,40 +340,38 @@ span{
 
 .footer {
     background-color: pink;
-    border-style: solid;
-    border-left: 0px;
-    border-right: 0px;
 }
-.footer .box{
+
+.footer .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    gap:2rem;  
+    gap:2rem;
 }
-.footer .box h3{
+.footer .box-container .box h3{
     font-size: 2.2rem;
     color: #222;
     padding:1rem 0;
 }
-.footer .box .link{
+.footer .box-container .box .link{
     padding:1rem 0;
     font-size: 1.4rem;
     color: #666;
     display:block;
 }
-.footer .box .link i{
+.footer .box-container .box .link i{
     padding-right: .5rem;
     color: #F08080;
 }
-.footer .box .link:hover{
+.footer .box-container .box .link:hover{
     color: #F08080;
 }
-.footer .box .link:hover i{
+.footer .box-container .box .link:hover i{
     padding-right: 2rem;
 }
-.footer .box .share{
+.footer .box-container .box .share{
     margin-top: 2rem;
 }
-.footer .box-container .box a{
+.footer .box-container .box .share a{
     height:4.5rem;
     width:4.5rem;
     line-height: 4.5rem;
@@ -384,7 +382,7 @@ span{
     color: #222;
     margin-right: .5rem;
 }
-.footer .box-container .box a:hover{
+.footer .box-container .box .share a:hover{
     color: #fff;
     background: #F08080;
 }
@@ -392,16 +390,4 @@ span{
     padding: 1rem 0;
     font-size: 1.7rem;
     color: #666;
-}
-
-.icons{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 5%;
-   }
-
-.icon {
-    margin-left : 1%;
-    margin-right: 1%;
 }
