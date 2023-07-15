@@ -5,8 +5,6 @@ const modal = document.querySelectorAll(".modal");
 document.querySelector('.clickMe').addEventListener(
     'click', function () {
         modal[0].style.display = "block";
-        
-        
     }
 )
 
@@ -79,7 +77,7 @@ window.addEventListener('scroll', () => {
 
 
 const sendData = async(result) => {
-  data = {"Answer" : result};
+  const data = {"Answer" : result};
   console.log(data);
   await fetch(`https://couplefastapi-1-f8802461.deta.app/babe/response`, 
       {
