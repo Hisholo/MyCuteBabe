@@ -1,0 +1,14 @@
+.memories {
+    text-align: center;
+    font-size: 10rem;
+    color: rgb(201, 159, 166);
+    margin-top: 15vh;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+@media(max-width : 600px) {
+    .memories {
+        font-size: 5rem;
+        margin-top: 15vh;
+    }
+}

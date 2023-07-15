@@ -3,20 +3,121 @@
     <head>
         <title>Love</title>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-        <link href="style.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width" />
+        <link href="style\style.css" rel="stylesheet">
+        <link href="style\footer.css" rel="stylesheet">
+        <link href="style\modal.css" rel="stylesheet">
+        <link href="style\button.css" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <style>
+            header {
+    position: absolute;
+    top:0px;
+    left:0px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    width:100%;
+    justify-content: left;
+    z-index: 1;
+}
+
+.logoDesign{
+    height: 100px;
+    width: 100px;
+}
+
+.navLinks {
+    flex: 1;
+    text-align: right;
+    padding-right: 5%;
+    list-style: none;
+    font-size: 1rem;
+    font-weight: bold;
+    
+}
+
+.links {
+    color:black;
+    padding: 2%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+}
+
+.links:active{
+    opacity: 0.5;
+}
+
+.fa-bars{
+    font-size: 0;
+}
+
+.fa-times {
+    font-size: 0;
+}
+
+@media(max-width: 600px){
+    header{
+        justify-content: center;
+    }
+
+    .navLinks {
+        position: fixed;
+        left: -60%;
+        top: 0px;
+        height: 100vh;
+        width: 60%;
+        flex-direction: row;
+        background-image: linear-gradient(to bottom, rgb(235, 149, 163),white);
+    }
+
+    .links {
+        display: block;
+        margin: 5%;
+        border-style: solid;
+        border-radius: 20px;
+    }
+
+    .fa-bars {
+        position : absolute;
+        left: 5%;
+        top: 30%;
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .fa-times {
+        margin-top: 10%;
+        font-size: 18px;
+    }
+
+    .sideBar {
+        margin-top: 10%;
+        text-align: center;
+    }
+}
+        </style>
     </head>
 
     <body>
         <header>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+
             <div class="logoDesign">
                 <img src="images/logo.png" style="height:100%; width:100%;">
+            </div>
+            
+            <div class="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <div class="sideBar">
+                    <a class="links" href="index.html">Home</a>
+                    <a class="links" href="memories.html">Memories</a>
+                </div>
             </div>
         </header>
 
         <div class="background">
-            <img class="background" src="images/background.jpg">
+            <img class="background" src="images/index.jpg">
             <div class="title">
                 My Precious
             </div>
@@ -55,20 +156,21 @@
             </div>
         </section>
 
-        <section style="display: flex; justify-content: center;" data-aos="fade-down-left">
+        <div style="display: flex; justify-content: center;" data-aos="fade-down-left">
             <button class="clickMe" type="button">Click Me</button>
-        </section>
+        </div>
 
         <section>
-            <div style="  display:flex; justify-content: center; margin-top:3%" data-aos="flip-down">
-                <div class="sorry">
-                    <img class="goodMemories" src="images/Sorry.jpg">
-                    
+            <div style="display:flex; justify-content: center; margin-top:3%" data-aos="flip-down">
+                <div class="pic">
+                    <img style="height: 100%;" src="images/Sorry.jpg">              
                 </div>
             </div>
+
             <div class="forgive" data-aos="fade-right">
                     forgive Him?
             </div>
+            
             <div style="display: flex; justify-content: center;" data-aos="fade-down-left">
                 <button type="button"  class="clickMe yes">YES</button>
                 <button type="button" class="clickMe no">NO</button>
@@ -77,8 +179,7 @@
 
 
         <!-- The Modal -->
-        <div id="myModal" class="modal">
-
+        <div class="modal">
             <!-- Modal content -->
             <div class="modal-content">
                 <div class="view">
@@ -91,32 +192,24 @@
             </div> 
         </div>
 
-        <!-- The Modal1 -->
-        <div id="Modal1" class="modal">
-
+        <div class="modal">
             <!-- Modal content -->
             <div class="modal-content">
-                <div class="view">
-                    <span class="close">&times;</span>
-                    <img src="images/sorry.gif" class="image">
-                    <div class="text">
-                        PLEASE FORGIVE ME... CHO PLEASE!!!
-                    </div>
+                <span class="close">&times;</span>
+                <img src="images/thankyou.gif" style="object-fit: fill;height : 50vh; width: 100%;">
+                <div class="text" style="margin-top: 10%;">
+                    THANK YOU SO MUCH BABE, <br> I LOVE YOU!!!
                 </div>
             </div>
         </div>
 
-        <!-- The Modal2 -->
-        <div id="Modal2" class="modal">
-
+        <div class="modal">
             <!-- Modal content -->
             <div class="modal-content">
-                <div class="view">
-                    <span class="close">&times;</span>
-                    <img src="images/thankyou.gif" style="object-fit: fill; height: 60%; width: 100%;">
-                    <div class="text" style="margin-top: 10%;">
-                        THANK YOU SO MUCH BABE, <br> I LOVE YOU!!!
-                    </div>
+                <span class="close">&times;</span>
+                <img src="images/sorry.gif" class="sorry">
+                <div class="text">
+                    PLEASE FORGIVE ME... CHO PLEASE!!!
                 </div>
             </div>
         </div>
@@ -124,19 +217,21 @@
         <section class="footer">
             <div class="box-container">
                 <div class="box">
-                    <h3>contact info</h3>
+                    <h3>Contact Info</h3>
                     <a class="link" href="#"> <i class="fas fa-phone"></i> +91 7005243103 </a>
-                <a class="link" href="#"> <i class="fas fa-envelope"></i> lorinhisholo@gmail.com </a>
-                <a class="link" href="#"> <i class="fas fa-map"></i> Nagaland, India - 797103 </a>
+                    <a class="link" href="#"> <i class="fas fa-envelope"></i> lorinhisholo@gmail.com </a>
+                    <a class="link" href="#"> <i class="fas fa-map"></i> Nagaland, India - 797103 </a>
                     <div class="share">
                         <a href="https://www.facebook.com/hisholo/" class="fab fa-facebook-f"></a>
                         <a href="" class="fab fa-twitter"></a>
                         <a href="https://www.instagram.com/hisholo_lorin/" class="fab fa-instagram"></a>
                         <a href="https://www.linkedin.com/in/hisholo-lorin-4a5332244/" class="fab fa-linkedin"></a>
                     </div>
-                </div>    
+                </div>
+            </div>
+        </section>    
 
-        <script src="script.js"></script>
+        <script src="script/script.js"></script>
         <script src="https://kit.fontawesome.com/0e4f1190dc.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
