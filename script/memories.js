@@ -1,4 +1,4 @@
-const getPreciousPics = async() => {
+const getPreciousPics = async function() {
     const domain = 'https://babefastapi-1-g2550338.deta.app';
     await fetch(`${domain}/babe/precious`)
     .then(response => response.json())
@@ -9,6 +9,8 @@ const getPreciousPics = async() => {
     .catch(error => alert(error))
 }
 
+getPreciousPics();
+
 const preciousContainer = document.querySelector('.preciousContainer');
 const displayPreciousPic = function(pic) {
     const html = `
@@ -18,8 +20,6 @@ const displayPreciousPic = function(pic) {
     `;
     preciousContainer.insertAdjacentHTML('beforeend',html);
 }
-
-getPreciousPics();
 
 
 
