@@ -31,15 +31,6 @@ for(let i = 0; i < close.length; i++)
   }
 };
 
-//Navigation bar for mobile view
-const navLinks = document.querySelectorAll('.navLinks');
-function showMenu(){
-  navLinks.forEach(navLink => navLink.style.left = "0");
-}
-function hideMenu(){
-  navLinks.forEach(navLink => navLink.style.left = "-60%");
-}
-
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
@@ -48,7 +39,7 @@ window.onclick = function(event) {
       modal[i].style.display = "none";
 }
 
-const backgroundHeight = getComputedStyle(document.querySelector(".background")).height;
+let backgroundHeight = getComputedStyle(document.querySelector(".background")).height;
 const header = document.querySelector('header');
 const links = document.querySelectorAll('.links');
 const bar = document.querySelector('.fa-bars');
@@ -74,26 +65,21 @@ window.addEventListener('scroll', () => {
   }
 })
 
-
-
 const sendData = async(result) => {
+  const domain = 'https://babefastapi-1-g2550338.deta.app';
   const data = {"Answer" : result};
+  const details = {
+    method: "POST",
+    body: JSON.stringify(data),
+    headers: {
+      "Content-Type": "application/json"
+    }        
+  }
   console.log(data);
-  await fetch(`https://couplefastapi-1-f8802461.deta.app/babe/response`, 
-      {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {
-            "Content-Type": "application/json"
-        }
-        
-      }
-    )
-    .then((response) => response.json())
-    .then((responseJson) => {
-        console.log(responseJson); 
-    })
+  await fetch(`${domain}/babe/response`, details)
+    .then(response => response.json())
+    .then((responseJson) => console.log(responseJson))
     .catch((error) => {
-        
+        alert(error);
     });
 }

@@ -1,8 +1,9 @@
-//Navigation bar for mobile view
-const navLinks = document.querySelectorAll('.navLinks');
-function showMenu(){
-  navLinks.forEach(navLink => navLink.style.left = "0");
-}
-function hideMenu(){
-  navLinks.forEach(navLink =>navLink.style.left = "-60%");
-}
+const getPreciousPics = function() {
+    const domain = 'https://babefastapi-1-g2550338.deta.app';
+    fetch(`${domain}/babe/precious`)
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => alert(error))
+} 
+
+getPreciousPics();

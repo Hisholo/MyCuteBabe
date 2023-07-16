@@ -51,6 +51,11 @@ header {
         justify-content: center;
     }
 
+    .logoDesign{
+        height: 60px;
+        width: 60px;
+    }
+
     .navLinks {
         position: fixed;
         left: -60%;
@@ -62,6 +67,7 @@ header {
     }
 
     .links {
+        color:black;
         display: block;
         margin: 5%;
         border-style: solid;
@@ -79,7 +85,7 @@ header {
     .fa-times {
         margin-top: 10%;
         font-size: 18px;
-        color: white;
+        color: black;
     }
 
     .sideBar {

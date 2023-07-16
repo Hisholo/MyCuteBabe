@@ -33,14 +33,20 @@ console.log(name, openingHours, categories);
 const {name: restaurantName, openeingHours : hours, categories : tags} = resturant;
 console.log(restaurantName, hours, tags);*/
 
-//const request = fetch('https://restcountries.eu/rest/v2/name/portugal');
-//console.log(request);
+const getCountryData = function(country) {
+    fetch(`https://restcountries.eu/rest/v2/name/${country}`)
+    .then(response => response.json())
+    .then(data => console.log(data))
+} 
 
-const header = document.querySelector('.header');
+getCountryData('portugal');
+
+
+/*const header = document.querySelector('.header');
 
 const message = document.createElement('div');
 message.classList.add('cookie-message');
 
 message.innerHTML = "We use cookied for imporved functionality and analytics, <button class='btnCloseCookie'> Got it!</button>";
 header.prepend(message); //first child of header
-header.append(message); //last child of header 
+header.append(message); //last child of header */

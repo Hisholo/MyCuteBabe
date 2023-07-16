@@ -167,11 +167,6 @@ span{
 
 
 @media(max-width: 600px){
-    .logoDesign{
-        height:70px;
-        width: 70px;
-    }
-
     .background{
         height:95vh;
     }
@@ -189,7 +184,7 @@ span{
         border-radius: 20px;
         color: black;
         border-color: rgb(205, 196, 196);
-        background: linear-gradient(to bottom right, rgba(217, 53, 53, 0.4), rgba(255, 255, 255,0.8));
+        background: linear-gradient(to bottom right, rgba(239, 150, 172, 0.4), rgba(255, 255, 255, 0));
     }
 
     html{

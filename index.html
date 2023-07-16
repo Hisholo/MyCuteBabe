@@ -3,7 +3,7 @@
     <head>
         <title>Love</title>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="style\style.css" rel="stylesheet">
         <link href="style\footer.css" rel="stylesheet">
         <link href="style\modal.css" rel="stylesheet">
@@ -11,91 +11,114 @@
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <style>
             header {
-    position: absolute;
-    top:0px;
-    left:0px;
-    display:flex;
-    flex-direction: row;
-    align-items: center;
-    width:100%;
-    justify-content: left;
-    z-index: 1;
-}
+                position: absolute;
+                top:0px;
+                left:0px;
+                display:flex;
+                flex-direction: row;
+                align-items: center;
+                width:100%;
+                justify-content: left;
+                z-index: 1;
+            }
 
-.logoDesign{
-    height: 100px;
-    width: 100px;
-}
+            .logoDesign{
+                height: 100px;
+                width: 100px;
+            }
 
-.navLinks {
-    flex: 1;
-    text-align: right;
-    padding-right: 5%;
-    list-style: none;
-    font-size: 1rem;
-    font-weight: bold;
-    
-}
+            .navLinks {
+                flex: 1;
+                text-align: right;
+                padding-right: 5%;
+                list-style: none;
+                font-size: 1rem;
+                font-weight: bold;
+                
+            }
 
-.links {
-    color:black;
-    padding: 2%;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 2rem;
-}
+            .links {
+                color:black;
+                padding: 2%;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 2rem;
+            }
 
-.links:active{
-    opacity: 0.5;
-}
+            .links:active{
+                opacity: 0.5;
+            }
 
-.fa-bars{
-    font-size: 0;
-}
+            .fa-bars{
+                font-size: 0;
+            }
 
-.fa-times {
-    font-size: 0;
-}
+            .fa-times {
+                font-size: 0;
+            }
 
-@media(max-width: 600px){
-    header{
-        justify-content: center;
-    }
+            .allowed {
+                margin: 5%;
+                margin-bottom: -5%;
+                padding: 2vh;
+                font-size: 3rem;
+                font-weight: bold;
+                text-align: center;
+                font-family: 'Courier New', Courier, monospace;
+                border-style: solid;
+                border-color: rgb(196, 192, 192);
+                border-radius: 30px;
+                background: linear-gradient(to bottom right, pink, rgba(255, 255, 255,0.0));
+            }
 
-    .navLinks {
-        position: fixed;
-        left: -60%;
-        top: 0px;
-        height: 100vh;
-        width: 60%;
-        flex-direction: row;
-        background-image: linear-gradient(to bottom, rgb(235, 149, 163),white);
-    }
+            @media(max-width: 600px){
+                header{
+                    justify-content: center;
+                }
 
-    .links {
-        display: block;
-        margin: 5%;
-        border-style: solid;
-        border-radius: 20px;
-    }
+                .logoDesign{
+                    height:60px;
+                    width: 60px;
+                }
 
-    .fa-bars {
-        position : absolute;
-        left: 5%;
-        top: 30%;
-        text-align: center;
-        font-size: 25px;
-    }
+                .navLinks {
+                    position: fixed;
+                    left: -60%;
+                    top: 0px;
+                    height: 100vh;
+                    width: 60%;
+                    flex-direction: row;
+                    background-image: linear-gradient(to bottom, rgb(235, 149, 163),white);
+                }
 
-    .fa-times {
-        margin-top: 10%;
-        font-size: 18px;
-    }
+                .links {
+                    display: block;
+                    margin: 5%;
+                    border-style: solid;
+                    border-radius: 20px;
+                }
 
-    .sideBar {
-        margin-top: 10%;
-        text-align: center;
-    }
-}
+                .fa-bars {
+                    position : absolute;
+                    left: 5%;
+                    top: 30%;
+                    text-align: center;
+                    font-size: 25px;
+                }
+
+                .fa-times {
+                    margin-top: 10%;
+                    font-size: 18px;
+                }
+
+                .sideBar {
+                    margin-top: 10%;
+                    text-align: center;
+                }
+
+                .allowed{
+                    font-size: 1.5rem;
+                }
+            }
         </style>
     </head>
 
@@ -122,6 +145,10 @@
                 My Precious
             </div>
             
+        </div>
+
+        <div class="allowed">
+            Note : Only my Girlfriend is allowed to read this!
         </div>
 
         <section class="container">
@@ -231,7 +258,8 @@
             </div>
         </section>    
 
-        <script src="script/script.js"></script>
+        <script src="script/index.js"></script>
+        <script src="script/mobileNav.js"></script>
         <script src="https://kit.fontawesome.com/0e4f1190dc.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
