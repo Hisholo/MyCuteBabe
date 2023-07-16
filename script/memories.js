@@ -3,8 +3,9 @@ const getPreciousPics = async function() {
     await fetch(`${domain}/babe/precious`)
     .then(response => response.json())
     .then(data => {
-        for(let i = 0; i < data.length; i++)
-            displayPreciousPic(data[i]);
+        console.log(data);
+        for(let i = 0; i < data.Urls.length; i++)
+            displayPreciousPic(data.Urls[i]);
     })
     .catch(error => alert(error))
 }
