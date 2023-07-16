@@ -1,7 +1,6 @@
 'use strict';
 
 const modal = document.querySelectorAll(".modal");
-
 document.querySelector('.clickMe').addEventListener(
     'click', function () {
         modal[0].style.display = "block";
