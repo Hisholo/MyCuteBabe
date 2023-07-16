@@ -45,7 +45,6 @@ const bar = document.querySelector('.fa-bars');
 const times = document.querySelector('.fa-times');
 
 window.addEventListener('scroll', () => {
-  hideMenu();
   if (window.scrollY  > Number.parseFloat(backgroundHeight))
   {
     header.style.position = 'fixed';

@@ -20,7 +20,7 @@ const getPreciousPics = async function() {
             </div>
             `)
         }
-        setTimeout(() => stopLoader(), 3000);
+        setTimeout(() => stopLoader(),1000);
     })
     .catch(error => alert(error))
 }

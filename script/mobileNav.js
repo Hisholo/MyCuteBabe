@@ -6,3 +6,7 @@ function showMenu(){
 function hideMenu(){
   navLinks.forEach(navLink =>navLink.style.left = "-60%");
 }
+
+window.addEventListener('scroll', () => {
+  hideMenu();
+})
