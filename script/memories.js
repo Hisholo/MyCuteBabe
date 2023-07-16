@@ -18,7 +18,7 @@ const displayPreciousPic = function(pic) {
 }
 
 getPreciousPics();
-for(let i = 0; i < precious.length; i++)
+for(let i = 0; i < precious.length(); i++)
     displayPreciousPic(precious[i]);
 
 
