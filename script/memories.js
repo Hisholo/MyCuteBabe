@@ -1,9 +1,11 @@
-let precious;
-const getPreciousPics = function() {
+const getPreciousPics = async() => {
     const domain = 'https://babefastapi-1-g2550338.deta.app';
-    fetch(`${domain}/babe/precious`)
+    await fetch(`${domain}/babe/precious`)
     .then(response => response.json())
-    .then(data => precious = data)
+    .then(data => {
+        for(let i = 0; i < data.length; i++)
+            displayPreciousPic(data[i]);
+    })
     .catch(error => alert(error))
 }
 
@@ -18,7 +20,6 @@ const displayPreciousPic = function(pic) {
 }
 
 getPreciousPics();
-for(let i = 0; i < precious.length(); i++)
-    displayPreciousPic(precious[i]);
+
 
 
