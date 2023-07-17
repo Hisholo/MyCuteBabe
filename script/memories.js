@@ -4,6 +4,19 @@ function stopLoader()
   loader.style.display = 'none';
 }
 
+const main = document.querySelector('main');
+function showContent()
+{
+    main.style.display = 'block';
+}
+
+
+navLinksContainer = document.querySelector('.navLinksContainer')
+window.onclick = function(event) {
+      if (event.target == navLinksContainer)
+        navLinksContainer.style.display = "none";
+  }
+
 const getPreciousPics = async function() {
     const domain = 'https://babefastapi-1-g2550338.deta.app';
     await fetch(`${domain}/babe/precious`)
@@ -20,7 +33,7 @@ const getPreciousPics = async function() {
             </div>
             `)
         }
-        setTimeout(() => stopLoader(),1000);
+        setTimeout(() => {stopLoader(); showContent();},1000);
     })
     .catch(error => alert(error))
 }
@@ -40,6 +53,3 @@ const displayPreciousPic = function(pic1,pic2) {
     `;
     preciousContainer.insertAdjacentHTML('beforeend',html);
 }
-
-
-
