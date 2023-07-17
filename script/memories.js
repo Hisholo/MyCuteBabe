@@ -30,11 +30,11 @@ getPreciousPics();
 const preciousContainer = document.querySelector('.preciousContainer');
 const displayPreciousPic = function(pic1,pic2) {
     const html = `
-    <div class="precious" data-aos="fade-up-right">
+    <div class="precious" data-aos="fade-up-left">
         <img class="pic" src="${pic1}"/>
     </div>
 
-    <div class="precious" data-aos="fade-up-left">
+    <div class="precious" data-aos="fade-up-right">
         <img class="pic" src="${pic2}"/>
     </div>
     `;
